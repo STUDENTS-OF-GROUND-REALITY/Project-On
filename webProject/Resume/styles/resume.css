@@ -1,0 +1,170 @@
+body{
+    background-color:#d9d9d9;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+
+/*
+<--- TOOLBAR --->
+*/
+.toolbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius:20%;
+}
+
+.menu-position {
+  float: left;
+}
+
+.menu-list{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu-list:hover{
+  background-color: #111;
+}
+
+
+
+
+
+
+/*   <---- Aside1 ---->   */
+#aside1{
+
+    background-image:linear-gradient(to right, #ff9900, white);
+    height:210px;
+    width:30%;
+    float:right;
+    border-radius:0px 15px 15px 0px;
+}
+#social-icons{
+    float:right;
+}
+/* Style all font icons */
+.fa {
+  padding:10px;
+  text-align: center;
+  text-decoration: none;
+  margin:8px;
+}
+
+/* Adding a hover effect on Icons */
+.fa:hover {
+  opacity: 0.3;
+}
+
+.fa-linkedin {
+    margin-left:55px;
+  background:blue;
+  color:white;
+}
+.fa-instagram {
+    margin-left:50px;
+  background:red;
+  color:white;
+}
+.fa-whatsapp {
+  background:green;
+  color:white;
+
+}
+.fa-google{
+    margin-left:75px;
+}
+
+
+
+
+
+/* <--- Header  ----> */
+header{
+    background-image:linear-gradient(to right, white, #ff9900);
+    text-align:center;
+    height:210px;
+    width:70%;
+    border-radius:15px 0px 0px 15px;
+}
+#about{
+    font-style:italic;
+    color:dimgrey;
+}
+#profile-pic{
+    float:left;
+    border-radius:40px;
+    height:60%;
+    margin:5%;
+}
+
+
+
+
+
+/*
+<-- Aside2 -->
+*/
+#aside2{
+    background-color:#99bbff;
+    width:30%;
+    float:right;
+}
+.side-section{
+    margin:10%;
+    color:#33569e;
+}
+.bullet-font{
+    font-weight:bold;
+    color:black;
+    padding:10px;
+}
+
+
+
+
+
+/*
+<------ Main    ---->
+*/
+main{
+    background-color:#d9d9d9;
+    width:70%;
+}
+.heading-color{
+    color:black;
+}
+.heading-color:hover{
+    color:white;
+}
+.second-heading{
+    color:black;
+}
+.second-heading:hover{
+    color:white;
+}
+.normal-text{
+    color:dimgrey;
+    font-style:italic;
+}
+#education-section{
+    margin:5%;
+    color:#33569e;
+}
+
+#experience-section{
+    margin:5%;
+    color:#33569e;
+}
+#projects-section{
+    margin:5%;
+    color:#33569e;
+}
