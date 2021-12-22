@@ -127,7 +127,9 @@ body.light {
 body.light .active{
     color:#ff9900;
 }
-body.light .btn{
+
+										/* NEW UPDATEDS */
+body.light .btn{	
     background-color:rgb(191 0 0 / 70%);
 }
 body.light .btn:hover{
@@ -146,11 +148,12 @@ body.light .button{
 body.light .button:hover{
     background-image:linear-gradient(-135deg, #ff3d00,orange, #ffd400);
 }
+										/* NEW UPDATEDS END */
+
 .checkbox {
 	opacity: 0;
 	position: absolute;
 }
-
 .label {
 	background-color: #302c2c8f;
 	border-radius: 50px;
