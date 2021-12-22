@@ -1,11 +1,12 @@
         *{
             margin: 0px;
             padding: 0px;
-
+            box-sizing: border-box;
         }
         body{
             background-image: linear-gradient(to bottom right,#144b95, black,#013ead5e, #144b95,#000000);
-            }
+            transition: background 3s linear;
+        }
 
         :root {
             --navbar-height:60px;
@@ -39,18 +40,21 @@
                 /* Adding a hover effect on Icons */
                 .fa:hover {
                   opacity: 0.3;
-                  transform: scale(1.3);
+                  transform: scale(1.0);
                   transition: 0.3s;
                 }
-
+                .active{
+                    color:#0d60cf;
+                }
                 .fa-home {
                   background:;
-                  color:white;
+                  /*color:white;*/
+                  border-radius:
                   font-size:3rem;
+                  padding: 3px 22px;
                 }
                  #home-button{
                    font-size:35px
-
                 }
                 /* navigation bar:logo and image */
                 #logo {
@@ -60,7 +64,26 @@
                 #logo img {
                     height: 66px;
                     margin: 10px 35px;
+                }
 
+                .image-logo:hover{
+                    box-shadow: 0px 2px 30px white;
+                    transition:0.3s;
+                }
+
+                .sub-menu{
+                    display:none;
+                    background:;
+                    /*position:absolute;
+                    margin-top:2%;*/
+
+                }
+                #logo ul li:hover .sub-menu{
+                    display:block;
+                    transition:0.5s;
+                }
+                #logo ul li:hover .sub-menu ul{
+                    display:block;
                 }
 
                 #navbar ul {
@@ -84,7 +107,7 @@
                 #navbar ul li a:hover {
                     color: black;
                     background-color: white;
-                    transition: 0.3s;
+                    transition: 1.0s;
                 }
 
                 #navbar {
@@ -93,8 +116,75 @@
                 .item{
                     margin-top:9px;
                 }
+
          /* <!------------  NAVIGATION BAR END  ----------> */
 
+/*<!--  THEME SECTION    -->*/
+body.light {
+	background-image:linear-gradient(to right, #ff9900, white);
+	transition:background 3s linear;
+}
+body.light .active{
+    color:#ff9900;
+}
+body.light .btn{
+    background-color:rgb(191 0 0 / 70%);
+}
+body.light .btn:hover{
+    background-color:rgb(191 0 0);
+}
+body.light #transparent-container{
+    background-color:rgb(255 153 0 / 54%);
+}
+body.light .about-col{
+    background-image: linear-gradient(
+                      45deg, #00000003, #000000cf, #ffe00059, transparent);
+}
+body.light .button{
+    background-image:linear-gradient(135deg, #ff3d00,orange, #ffd400);
+}
+body.light .button:hover{
+    background-image:linear-gradient(-135deg, #ff3d00,orange, #ffd400);
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #302c2c8f;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+}
+
+.label .ball {
+	background-color: #0078f3;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 1s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+	background-color:#ff9b0e;
+	transition:1s;
+}
+.checkbox:checked + .label{
+    background-color:white;
+}
+/*<!--  THEME SECTION END   -->*/
 
         /* <!---------- HOME SECTION  --------------> */
         #home {
@@ -159,6 +249,9 @@
           color: white;
           font-size: xx-large;
         }
+        #welcome{
+            animation: slide-down 3s ease both;
+        }
         #welcome:hover{
             color:transparent;
             transition:0.5s;
@@ -206,12 +299,18 @@
             background-color:#00000033;
             box-shadow:2px 4px 30px rgb(0 89 191);
         }
+        #upper-blog2:hover{
+            transform:scale(1.02);
+            transition:0.5s;
+        }
         .lowerBlog{
            margin-left:10%; margin-right:10%; margin:10%;
         }
         .lowerBlog:hover{
             background-color: rgb(0 0 0 / 59%);
             color:white;
+            transform:scale(1.05);
+            transition:3s;
         }
         .image{
             width:100%;
@@ -241,10 +340,22 @@
         #startup-owners::before {
              content: "";
              margin:4px;
-
              /* z-index: -1;*/
         }
-
+        .trans-container{
+            border-radius: 5% 30%;
+            background-color:rgb(21 75 155 / 63%);
+            padding:1px 8px;
+            color:black;
+            height: 85%;
+            margin-top:2%;
+            width: 100%;
+        }
+        .trans-container:hover{
+            color:white;
+            transform: scale(1.1);
+            transition:2s;
+        }
         .row{
             padding:23px;
             height:100%;
@@ -362,7 +473,8 @@
 }
 .flex-container:hover{
     border:3px solid #F0F8FF;
-    transition:0.3s;
+    transform:scale(1.05);
+    transition:2s;
     box-shadow: 2px 8px 50px rgb(191 51 0 / 100%);
 }
 .flex-child{
@@ -378,7 +490,7 @@
 .Point{
     font-size:17px;
     color:black;}
-#p3::first-letter {
+.p3::first-letter {
     color:black;}
 #p2::first-letter {
         color:red;
@@ -438,7 +550,7 @@
                }
                .about-col{
                            background-image: linear-gradient(
-                           45deg, #00000003, #000000cf, #ffe00059, transparent);
+                           45deg, #00000003, #000000cf, #00d0ff9c, transparent);
                            color:white;
                            border-radius: 20px 20px 20px 20px;
                            margin-right: 13px;
@@ -448,6 +560,10 @@
                #foot aside p{
                    text-align:right;
                    margin-right:5%;
+               }
+               .scale:hover{
+                    transform:scale(0.9);
+                    transition:0.3s;
                }
                .fa{
                     margin-top:3%;
@@ -463,7 +579,7 @@
                .fa-instagram {
                   background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
                   color:rgb(5, 5, 5);
-                  margin-left: 7%;
+                  margin-left: 2%;
                   animation-name: instag;
                   position: relative;
                   animation-duration: 3s;
@@ -481,8 +597,9 @@
                .fa-facebook {
                    background:	#4267B2;
                    color:rgb(5, 5, 5);
-                   width:5%;
+                   width:10%;
                    animation-name: faca;
+                   margin:2px;
                   position: relative;
                   animation-duration: 3.5s;
                   animation-iteration-count: 1;
@@ -534,7 +651,7 @@
                 text-align:center;
                 animation-name: footc-ani1;
                 position: relative;
-                animation-duration: 5s;
+                animation-duration: 10s;
                 animation-iteration-count:infinite;
                 animation-direction: alternate-reverse;
             }
@@ -549,7 +666,7 @@
                 text-align:center;
                 animation-name: footc-ani2;
                 position: relative;
-                animation-duration: 5s;
+                animation-duration: 10s;
                 animation-iteration-count:infinite;
                 animation-direction: alternate-reverse;
             }
@@ -564,7 +681,7 @@
                 text-align:center;
                 animation-name: footc-ani3;
                 position: relative;
-                animation-duration: 5s;
+                animation-duration: 10s;
                 animation-iteration-count:infinite;
                 animation-direction: alternate-reverse;
             }
@@ -579,7 +696,7 @@
                 text-align:center;
                 animation-name: footc-ani4;
                 position: relative;
-                animation-duration: 5s;
+                animation-duration: 10s;
                 animation-iteration-count:infinite;
                 animation-direction: alternate-reverse;
             }
